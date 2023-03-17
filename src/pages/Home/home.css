@@ -1,0 +1,35 @@
+
+.poke-card {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   height: 70px;
+   border: 2px solid black;
+   border-radius: 5px;
+   margin: 5px;
+   padding: 0 10px 0 5px;
+}
+
+.poke-sprite {
+   width: 65px;
+   height: 65px;
+}
+
+
+.nome-sprite {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   
+}
+
+button.save-del {
+   border: none;
+   background-color: white;
+   margin-left: 5px;
+}
+
+button.save-del > img {
+   width: 40px;
+}
