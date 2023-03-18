@@ -4,8 +4,14 @@
    align-items: center;
    justify-content: space-around;
    background-color: black;
-   height: 55px;
+   height: 65px;
+   width: 100vw;
+   position: fixed;
    
+}
+
+.espaco-header {
+   height: 65px;
 }
 
 .div-logo {
@@ -16,7 +22,6 @@
 }
 
 .header-titulo {
-   background-color: black;
    color: white;
 }
 
