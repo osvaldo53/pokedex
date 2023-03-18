@@ -48,8 +48,8 @@ function Home() {
                      </div>
                      
                      <div className="botoes-save-del">
-                        <button className="save-del"><img src={save}/></button>
-                        <button className="save-del"><img src={del}/></button>
+                        <button className="save-del"><img src={save} alt="save"/></button>
+                        <button className="save-del"><img src={del} alt="del"/></button>
                      </div>
                   </article>
                )
