@@ -2,15 +2,15 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import './home.css';
-
 import del from './delete-icon.svg';
 import save from './save-icon.svg';
-
+import Loading from "../../components/Loading";
 
 
 function Home() {
 
    const [pokes, setPokes] = useState([]);
+   const [loading, setLoading] = useState(true);
 
    useEffect(() => {
       const arrayPokes = [];
@@ -24,6 +24,7 @@ function Home() {
          }
          
          setPokes(arrayPokes);
+         setLoading(false);
       }
 
       loadPokes();
@@ -34,6 +35,12 @@ function Home() {
 
    const capitalize = (str) => {
       return (str.charAt(0).toUpperCase() + str.substr(1))
+   }
+
+   if (loading) {
+      return(
+         <Loading/>
+      )
    }
 
    return(
