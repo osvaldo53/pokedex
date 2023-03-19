@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import './home.css';
-import del from './delete-icon.svg';
-import save from './save-icon.svg';
 import Loading from "../../components/Loading";
 
 
@@ -51,12 +49,12 @@ function Home() {
                   <article key={poke.id} className='poke-card'>
                      <div className="nome-sprite">
                         <img src={poke.sprites.front_default} alt={poke.name} className='poke-sprite'></img>
-                        <h1>#{poke.id.toString().padStart(3, '0')} {capitalize(poke.name)}</h1>
+                        <h1 className="nome-h1">#{poke.id.toString().padStart(3, '0')} {capitalize(poke.name)}</h1>
                      </div>
                      
                      <div className="botoes-save-del">
-                        <button className="save-del"><img src={save} alt="save"/></button>
-                        <button className="save-del"><img src={del} alt="del"/></button>
+                        <span className="material-symbols-outlined button-icon" onClick={()=>alert("Teste search")}>Search</span>
+                        <span className="material-symbols-outlined button-icon" onClick={()=>alert("Teste pokemon salvo")}>Save</span>
                      </div>
                   </article>
                )

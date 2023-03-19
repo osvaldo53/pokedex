@@ -23,6 +23,9 @@
 
 .header-titulo {
    color: white;
+   font-family: 'Lilita One', cursive;
+   font-weight: 200;
+   font-size: 2em;
 }
 
 .header-img {
