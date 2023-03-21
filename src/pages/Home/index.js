@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import './home.css';
 import Loading from "../../components/Loading";
+import { Link } from "react-router-dom";
+import Pokemon from "../Pokemon";
 
 
 function Home() {
@@ -53,8 +55,9 @@ function Home() {
                      </div>
                      
                      <div className="botoes-save-del">
-                        <span className="material-symbols-outlined button-icon" onClick={()=>alert("Teste search")}>Search</span>
-                        <span className="material-symbols-outlined button-icon" onClick={()=>alert("Teste pokemon salvo")}>Save</span>
+                        <Link to={`/pokemon/${poke.id}`}><span className="material-symbols-outlined button-icon">Search</span></Link>
+                        <span className="material-symbols-outlined button-icon">Save</span>
+                        
                      </div>
                   </article>
                )
