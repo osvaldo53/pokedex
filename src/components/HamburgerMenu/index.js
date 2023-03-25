@@ -20,14 +20,14 @@ function HamburguerMenu() {
          <div className={isOpen ? 'menu-open' : 'menu'}>
             <h1 className="h1-menu">Escolha a geração:</h1>
             <div className="geracoes-container">
-               <a href="#">1ª</a>
-               <a href="#">2ª</a>
-               <a href="#">3ª</a>
-               <a href="#">4ª</a>
-               <a href="#">5ª</a>
-               <a href="#">6ª</a>
-               <a href="#">7ª</a>
-               <a href="#">8ª</a>
+               <a href="/">1ª</a>
+               <a href="/">2ª</a>
+               <a href="/">3ª</a>
+               <a href="/">4ª</a>
+               <a href="/">5ª</a>
+               <a href="/">6ª</a>
+               <a href="/">7ª</a>
+               <a href="/">8ª</a>
             </div>
             <Footer/>
          </div>
