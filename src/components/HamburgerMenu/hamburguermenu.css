@@ -14,7 +14,6 @@
    overflow: hidden;
    font-size: 20px;
    text-align: center;
-   
  }
  
  .menu-open {
@@ -35,8 +34,7 @@
    align-self: center;
    flex-wrap: wrap;
    justify-content: center;
-   width: 90vw;
-
+   width: 87vw;
  }
 
  .h1-menu {
@@ -44,20 +42,25 @@
    text-align: center;
    margin-top: 40px;
    margin-bottom: 20px;
+   color: black;
+   background-image: linear-gradient(to right, transparent, white, white, white, transparent);
  }
 
  .geracoes-container a {
    display: flex;
    justify-content: center;
-   font-size: 35px;
+   align-items: center;
+   font-family: 'Lilita One', sans-serif;
+   font-size: 30px;
    text-decoration: none;
    color: white;
    background-color: darkcyan;
    padding: 15px;
    margin: 10px;
-   width: 70px;
-   height: 70px;
+   width: 55px;
+   height: 55px;
    border-radius: 50%;
+   border: 2px solid white;
    
  }
 
