@@ -58,6 +58,8 @@
    margin-left: 10px;
    background-color: darkcyan;
    border-radius: 8px;
+   cursor: pointer;
+   align-self: center;
 }
 
 .espaco-header { /*gambiarra para botar o conteudo embaixo do header*/

@@ -29,8 +29,7 @@ function Pokemon() {
    return(
       <div className="pokemon-info">
          <h1>
-            #{pokemon.id ? pokemon.id.toString().padStart(3, '0') : ''} 
-            {pokemon.name ? capitalize(pokemon.name) : ''}
+            #{pokemon.id ? pokemon.id.toString().padStart(3, '0') : ''} {pokemon.name ? capitalize(pokemon.name) : ''}
          </h1>
 
          <img src={pokemon.sprites ? pokemon.sprites.front_default : ''} alt={pokemon.name}></img>
