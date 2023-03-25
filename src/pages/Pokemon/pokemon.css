@@ -1,0 +1,14 @@
+
+.pokemon-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.pokemon-info img {
+   width: 200px;
+   height: 200px;
+
+}

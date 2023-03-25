@@ -3,9 +3,11 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   
+   bottom: 65px;
    
 }
+
+
 
 .poke-card {
    display: flex;
@@ -41,16 +43,6 @@
    color: white;
 }
 
-/* button.save-del {
-   border: none;
-   background-color: white;
-   margin-left: 5px;
-}
-
-button.save-del > img {
-   width: 40px;
-} */
-
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -66,4 +58,8 @@ button.save-del > img {
    margin-left: 10px;
    background-color: darkcyan;
    border-radius: 8px;
+}
+
+.espaco-header { /*gambiarra para botar o conteudo embaixo do header*/
+   height: 65px;
 }

@@ -1,18 +1,14 @@
 
 .header-box {
    display: flex;
-   align-items: center;
    justify-content: space-around;
    background-color: black;
    height: 65px;
-   width: 100vw;
    position: fixed;
+   width: 100vw;
    
 }
 
-.espaco-header {
-   height: 65px;
-}
 
 .div-logo {
    display: flex;
@@ -31,4 +27,8 @@
 .header-img {
    width: 45px;
    margin-left: 15px;
+}
+
+.espaco-header { /*gambiarra para deixar o conteudo abaixo do header*/
+   height: 65px;
 }

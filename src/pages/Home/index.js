@@ -45,6 +45,7 @@ function Home() {
 
    return(
       <div className="container">
+
          <div className="lista-pokes">
             {pokes.map((poke) => {
                return(
@@ -55,8 +56,8 @@ function Home() {
                      </div>
                      
                      <div className="botoes-save-del">
-                        <Link to={`/pokemon/${poke.id}`}><span className="material-symbols-outlined button-icon">Search</span></Link>
-                        <span className="material-symbols-outlined button-icon">Save</span>
+                        <Link to={`/pokemon/${poke.id}`}><span className="material-symbols-outlined button-icon">search</span></Link>
+                        <span className="material-symbols-outlined button-icon">save</span>
                         
                      </div>
                   </article>
