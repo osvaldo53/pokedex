@@ -4,7 +4,6 @@ import api from "../../services/api";
 import './home.css';
 import Loading from "../../components/Loading";
 import { Link } from "react-router-dom";
-import Pokemon from "../Pokemon";
 
 
 function Home() {
