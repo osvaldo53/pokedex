@@ -9,7 +9,7 @@ function HamburguerMenu() {
 
    const [isOpen, setIsOpen] = useState(false);
    const {handleStateChange} = useContext(GenContext);
-   const {loading, handleLoadingChange} = useContext(GenContext);
+   const {handleLoadingChange} = useContext(GenContext);
 
 
    const handleClick = () => {
