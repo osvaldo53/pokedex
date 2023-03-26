@@ -1,8 +1,12 @@
 import RoutesApp from "./routes";
+import GenProvider from "./contexts/genContext";
+
 
 function App() {
   return (
-    <RoutesApp/>
+   <GenProvider>
+      <RoutesApp/>
+   </GenProvider>
   );
 }
 

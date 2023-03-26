@@ -48,11 +48,43 @@ function Pokemon() {
 
          <p className="pokemon-types-p">{pokemon.types ? types() : ''}</p>
 
-         <p className="altura-peso-p">Altura: {pokemon.height ? pokemon.height/10 : ''} m</p>
-         <p className="altura-peso-p">Peso: {pokemon.weight ? pokemon.weight/10 : ''} Kg</p>
-         
-         
+         <table>
+            <thead>
+               <tr>
+                  <th colSpan="2">Atributos</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>HP:</td>
+                  <td>{pokemon.stats ? pokemon.stats[0].base_stat : ''}</td>
+               </tr>
+               <tr>
+                  <td>Ataque:</td>
+                  <td>{pokemon.stats ? pokemon.stats[1].base_stat : ''}</td>
+               </tr>
+               <tr>
+                  <td>Defesa:</td>
+                  <td>{pokemon.stats ? pokemon.stats[2].base_stat : ''}</td>
+               </tr>
+               <tr>
+                  <td>Sp. Ataque:</td>
+                  <td>{pokemon.stats ? pokemon.stats[3].base_stat : ''}</td>
+               </tr>
+               <tr>
+                  <td>Sp. Defesa:</td>
+                  <td>{pokemon.stats ? pokemon.stats[4].base_stat : ''}</td>
+               </tr>
+               <tr>
+                  <td>Velocidade:</td>
+                  <td>{pokemon.stats ? pokemon.stats[5].base_stat : ''}</td>
+               </tr>
+            </tbody>
+         </table>
 
+         <p className="altura-peso-p">Altura: {pokemon.height ? pokemon.height/10 : ''} m
+         <br/>Peso: {pokemon.weight ? pokemon.weight/10 : ''} Kg</p>
+         
       </div>
    )
    

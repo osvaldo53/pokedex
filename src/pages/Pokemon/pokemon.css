@@ -29,5 +29,37 @@
 
 .altura-peso-p {
    color: white;
+   text-align: center;
    font-size: 24px;
+   margin-top: 10px;
+   margin-bottom: 10px;
 }
+
+
+/*TABELA*/
+
+table {
+   border-collapse: collapse;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   border-radius: 3px;
+   overflow: hidden;
+   margin-top: 10px;
+ }
+ 
+ 
+ th {
+   border: 2px solid #ddd;
+   background-color: #EF4036;
+   font-weight: bold;
+   padding: 7px;
+   text-align: center;
+ }
+ 
+ td {
+   border: 2px solid #ddd;
+   padding: 7px 27px;
+   text-align: center;
+   color: white;
+ }
+ 
