@@ -56,6 +56,9 @@ function Home() {
                n1 = 810;
                n2 = 905;
                break;
+            default:
+               n1 = 1;
+               n2 = 151;
          }
 
          for ( ; n1 <= n2; n1++) {
@@ -70,7 +73,7 @@ function Home() {
 
       loadPokes();
       
-   }, [gen])
+   }, [gen, handleLoadingChange])
 
    console.log(pokes);
    
