@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import api from "../../services/api";
 import { useParams } from "react-router-dom";
 import './pokemon.css';
+import { GenContext } from "../../contexts/genContext";
 
 function Pokemon() {
 
    const { id } = useParams();
-   const [pokemon, setPokemon] = useState({});
+   const [pokemon, setPokemon] = useState([]);
+   const { handleLoadingChange} = useContext(GenContext);
+
+   const [pokeFavorito, setPokeFavorito] = useState(false);
+
 
    useEffect( () => {
       
@@ -19,6 +24,9 @@ function Pokemon() {
 
       loadPoke();
 
+      
+      
+      return handleLoadingChange(true);
    }, [id])
 
    const capitalize = (str) => {
@@ -35,7 +43,43 @@ function Pokemon() {
       }
    }
 
-   console.log(pokemon);
+   function salvarPoke() {
+      const minhaLista = localStorage.getItem("@fav-pokes");
+
+      let pokesSalvos = JSON.parse(minhaLista) || [];
+
+      const hasPoke = pokesSalvos.some( (pokesSalvo) =>
+      pokesSalvo.id === pokemon.id);
+
+      if(hasPoke) {
+         setPokeFavorito(true);
+         alert("Esse pokemon já está na sua lista!");
+         return;
+      }
+
+      pokesSalvos.push(pokemon);
+      localStorage.setItem("@fav-pokes", JSON.stringify(pokesSalvos));
+      alert("Pokemon salvo com sucesso!");
+      setPokeFavorito(true);
+   }
+   console.log(pokemon)
+   
+   function excluirPoke(id) {
+      const pokemonArray = Object.values(pokemon); //transforma a state q era um objeto em array para poder usar o metodo filter q só funciona com arrays
+
+      //PRECISO QUE O POKE SAIA COMO OBJETO PORQUE SENAO NAO VAI TER ID
+      let filtroPokes = pokemonArray.filter( (item) => {
+         return (item.id !== id)
+      })
+
+      localStorage.setItem("@fav-pokes", JSON.stringify(filtroPokes));
+      alert("Pokemon removido com sucesso!");
+      setPokeFavorito(false);
+   }
+
+   const conteudoBotao = pokeFavorito ? "delete" : "save";
+ 
+
    
    return(
       <div className="pokemon-info">
@@ -85,6 +129,7 @@ function Pokemon() {
          <p className="altura-peso-p">Altura: {pokemon.height ? pokemon.height/10 : ''} m
          <br/>Peso: {pokemon.weight ? pokemon.weight/10 : ''} Kg</p>
          
+         <span className="material-symbols-outlined button-icon" onClick={pokeFavorito ? excluirPoke : salvarPoke} style={{ backgroundColor: pokeFavorito ? "#EF4036" : "" }}>{conteudoBotao}</span>
       </div>
    )
    
