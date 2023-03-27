@@ -27,7 +27,7 @@ function Pokemon() {
       
       
       return handleLoadingChange(true);
-   }, [id])
+   }, [id, handleLoadingChange])
 
    const capitalize = (str) => {
       return (str.charAt(0).toUpperCase() + str.substr(1))
